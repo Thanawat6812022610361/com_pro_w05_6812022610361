@@ -11,13 +11,13 @@ struct Person {
 int main() {
     struct Person people[3];
 
-    printf("กรุณาป้อนข้อมูลจำนวน 3 คน:\n");
+    printf("กรุณาป้อนข้อมูลจำนวน 3 คน:\n"); 
     printf("รูปแบบข้อมูล: ชื่อเล่น อายุ ส่วนสูง น้ำหนัก รหัสเกรด\n");
     printf("ตัวอย่าง: A 21 175.5 90.2 A\n\n");
 
     // รับข้อมูล
-    for(int i = 0; i < 3; i++) {
-        printf("ป้อนข้อมูลคนที่ %d: ", i + 1);
+    for(int i = 0; i < 3; i++) { 
+        printf("ป้อนข้อมูลคนที่ %d: ", i + 1);// ป้อนข้อมูลคำสั่ง i จนกว่า i จะถึง 3
         scanf(" %c %d %f %f %c",
               &people[i].name,
               &people[i].age,
@@ -27,12 +27,12 @@ int main() {
     }
 
     // แสดงผล
-    printf("\n+-------+-----+-----------+-----------+------------+\n");
-    printf("| Name  | Age | Height(cm)| Weight(kg)| Grade Code |\n");
+    printf("\n+-------+-----+-----------+-----------+------------+\n"); // ปริ้นตารางของโค้ด
+    printf("| Name  | Age | Height(cm)| Weight(kg)| Grade Code |\n"); // ปริ้นหัวข้อตาราง 
     printf("+-------+-----+-----------+-----------+------------+\n");
 
     for(int i = 0; i < 3; i++) {
-        printf("|   %c   | %3d |   %6.1f  |   %6.1f  |     %c      |\n",
+        printf("|   %c   | %3d |   %6.1f  |   %6.1f  |     %c      |\n", //แสดงผลข้อมูลของโค้ดที่ระบุทั้ง 3 คน
                people[i].name,
                people[i].age,
                people[i].height,
